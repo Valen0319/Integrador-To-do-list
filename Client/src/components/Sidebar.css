@@ -1,0 +1,45 @@
+:root {
+  --color-bg-main: #E3F6F5;
+  --color-bg-sidebar: #BEE1E6;
+  --color-bg-panel: #F6FFF8;
+  --color-text-main: #5C5C5C;
+  --color-text-accent: #3A6EA5;
+  --radius-lg: 18px;
+  --shadow-lg: 0 2px 16px #a7c7e755;
+}
+
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Layout */
+.layout { display:flex; flex-direction:column; font-family:'Poppins', sans-serif; min-height:100vh; }
+.layout--bg-main { background: var(--color-bg-main); }
+.layout--text-main { color: var(--color-text-main); }
+
+/* Header */
+.header { display:flex; justify-content:center; align-items:center; padding:16px 0; }
+.header--gradient { background: linear-gradient(90deg, #3A6EA5, #A7C7E7); color:#fff; }
+.header__title { font-size:2rem; font-weight:600; }
+
+/* Main */
+.main { flex:1; display:flex; gap:16px; padding:16px; align-items:stretch; }
+
+/* Sidebar */
+.sidebar { width:260px; background:var(--color-bg-sidebar); border-radius:var(--radius-lg); padding:32px 20px; display:flex; flex-direction:column; box-shadow: var(--shadow-lg); transition: transform 0.2s; }
+.sidebar:hover { transform: translateY(-2px); }
+.sidebar__list { list-style:none; }
+.sidebar__item { margin-bottom:12px; }
+.sidebar__link { display:flex; align-items:center; gap:8px; color: var(--color-text-main); text-decoration:none; font-weight:500; padding:8px 12px; border-radius:8px; transition: background 0.2s, color 0.2s; }
+.sidebar__link:hover { background: var(--color-text-accent); color:#fff; }
+.sidebar__section { font-weight:600; color: var(--color-text-accent); margin:20px 0 6px 0; font-size:1.08rem; border-top:1px solid var(--color-bg-sidebar); padding-top:10px; user-select:none; }
+.sidebar__bottom { margin-top:auto; display:flex; gap:12px; }
+.sidebar__button { flex:1; background: var(--color-text-accent); color:#fff; border:none; padding:10px 0; border-radius:8px; cursor:pointer; font-weight:500; transition: background 0.2s, transform 0.2s; box-shadow:0 2px 8px #bee1e633; }
+.sidebar__button:hover { background: var(--color-bg-sidebar); transform: translateY(-2px); }
+
+/* Panel */
+.panel { flex:1; padding:32px; background:var(--color-bg-panel); border-radius:var(--radius-lg); box-shadow: var(--shadow-lg); transition: transform 0.2s; }
+.panel:hover { transform: translateY(-2px); }
+.panel__title { font-size:1.5rem; margin-bottom:12px; }
+.panel__text { margin-bottom:10px; line-height:1.5; }
+
+/* Footer */
